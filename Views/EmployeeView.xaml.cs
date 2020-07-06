@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TheCatalogueEmployee.ViewModel;
 using static TheCatalogueEmployee.Model.EmployeeModel;
+using static TheCatalogueEmployee.ViewModel.EmployeeViewModel;
 
 namespace TheCatalogueEmployee.Views
 {
@@ -27,11 +28,6 @@ namespace TheCatalogueEmployee.Views
         public EmployeeView()
         {
            InitializeComponent();
-
-        }
-
-        private void ctmView(object sender, RoutedEventArgs e)
-        {
 
         }
 
@@ -53,6 +49,11 @@ namespace TheCatalogueEmployee.Views
         private void btnCloseEdit_Click(object sender, RoutedEventArgs e)
         {
             PopEdit.IsOpen = false;
+        }
+
+        private void ctmEdit(object sender, RoutedEventArgs e)
+        {
+            PopEdit.IsOpen = true;
         }
     }
 

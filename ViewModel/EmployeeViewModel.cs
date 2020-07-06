@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using TheCatalogueEmployee.ICommands;
 using TheCatalogueEmployee.Model;
 using static TheCatalogueEmployee.Model.EmployeeModel;
@@ -15,10 +17,13 @@ namespace TheCatalogueEmployee.ViewModel
     {
         public ICommandsClass AddCommand { get; set; }
         public ICommandsClass EditCommand { get; set; }
+
+        public ICommandsClass ViewCommand { get; set; }
         public EmployeeViewModel()
         {
             AddCommand = new ICommandsClass(OnAdd);
             EditCommand = new ICommandsClass(OnEdit);
+            ViewCommand = new ICommandsClass(OnView);
         }
 
         public ObservableCollection<Employee> Employees
@@ -72,18 +77,22 @@ namespace TheCatalogueEmployee.ViewModel
             set
             {
                 selectedEmployee = value;
-                AddCommand.RaiseCanExecuteChanged();
+                EditCommand.RaiseCanExecuteChanged();
             }
         }
 
 
-     
-      
-        public class ContextMenuView
-        {
-            public ContextMenuView()
-            {
 
+
+        private void OnView()
+        {
+
+            IEnumerable<Employee> employees = Employees.Where(a => a.Name == selectedEmployee.Name);
+
+            foreach (var temp in employees)
+            {
+                MessageBox.Show("Name : " + temp.Name + "\n" + "Surname : " + temp.Surname + "\n" + "Date Of Birth : " +
+                   temp.DateOfBirth + "\n" + "Gender : " + temp.Gender + "\n" + "Home Address : " + temp.HomeAddress, temp.Name.ToUpper() + "'s DETAILS");
             }
         }
 
@@ -95,8 +104,11 @@ namespace TheCatalogueEmployee.ViewModel
 
         private void OnEdit()
         {
-           
+          
+
         }
+
+        
 
         public string newName { get; set; }
         public string newSurname { get; set; }
