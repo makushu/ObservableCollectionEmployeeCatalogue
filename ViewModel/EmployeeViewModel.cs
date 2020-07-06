@@ -17,7 +17,6 @@ namespace TheCatalogueEmployee.ViewModel
     {
         public ICommandsClass AddCommand { get; set; }
         public ICommandsClass EditCommand { get; set; }
-
         public ICommandsClass ViewCommand { get; set; }
         public EmployeeViewModel()
         {
@@ -32,9 +31,10 @@ namespace TheCatalogueEmployee.ViewModel
             set;
         }
 
+        ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+
         public void ShowEmployees()
         {
-            ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
 
             employees.Add(new Employee
             {
@@ -86,26 +86,31 @@ namespace TheCatalogueEmployee.ViewModel
 
         private void OnView()
         {
-
-            IEnumerable<Employee> employees = Employees.Where(a => a.Name == selectedEmployee.Name);
-
-            foreach (var temp in employees)
-            {
-                MessageBox.Show("Name : " + temp.Name + "\n" + "Surname : " + temp.Surname + "\n" + "Date Of Birth : " +
-                   temp.DateOfBirth + "\n" + "Gender : " + temp.Gender + "\n" + "Home Address : " + temp.HomeAddress, temp.Name.ToUpper() + "'s DETAILS");
-            }
+                MessageBox.Show("Name : " + selectedEmployee.Name + "\n" + "Surname : " + selectedEmployee.Surname + "\n" + "Date Of Birth : " +
+                   selectedEmployee.DateOfBirth + "\n" + "Gender : " + selectedEmployee.Gender + "\n" + "Home Address : " + selectedEmployee.HomeAddress, selectedEmployee.Name.ToUpper() + "'s DETAILS");
         }
 
 
         private void OnAdd()
         {
-            Employees.Add(new Employee { Name = newName, Surname = newSurname, Gender=newGender, DateOfBirth=newDateOfBirth, HomeAddress=newHomeAddress});
+            
+            employees.Add(new Employee { Name = newName, Surname = newSurname, Gender=newGender, DateOfBirth=newDateOfBirth, HomeAddress=newHomeAddress});
         }
 
         private void OnEdit()
         {
-          
+            employees.Add(new Employee
+            {
 
+                Name = selectedEmployee.Name,
+                Surname = selectedEmployee.Surname,
+                Gender = selectedEmployee.Gender,
+                DateOfBirth = selectedEmployee.DateOfBirth,
+                HomeAddress = selectedEmployee.HomeAddress
+
+
+
+            });
         }
 
         
