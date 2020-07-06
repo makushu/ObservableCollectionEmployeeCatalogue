@@ -44,6 +44,16 @@ namespace TheCatalogueEmployee.Views
         {
             PopEdit.IsOpen = true;
         }
+
+        private void btnCloseAdd_Click(object sender, RoutedEventArgs e)
+        {
+            PopAdd.IsOpen = false;
+        }
+
+        private void btnCloseEdit_Click(object sender, RoutedEventArgs e)
+        {
+            PopEdit.IsOpen = false;
+        }
     }
 
 }
