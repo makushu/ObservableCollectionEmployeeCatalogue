@@ -79,21 +79,21 @@
             <RowDefinition Height="62*"/>
         </Grid.RowDefinitions>
         <Label Content="Name" Style="{StaticResource label}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.615,0.617" Margin="10,0,0,0"/>
-        <TextBox Text="{Binding Name, Mode = OneWayToSource}" ToolTip="Please enter employee name" HorizontalAlignment="Left" Height="26" Margin="120,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417"/>
+        <TextBox Text="{Binding selectedEmployee.Name}" ToolTip="Please enter employee name" HorizontalAlignment="Left" Height="26" Margin="120,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417"/>
         <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="542,0,0,0" VerticalAlignment="Top" Width="18" Height="26" RenderTransformOrigin="3.811,0.508"/>
 
         <Label Content="Surname" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Surname, Mode = OneWayToSource}" ToolTip="Please enter employee surname" HorizontalAlignment="Left" Height="23" Margin="120,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417"/>
+        <TextBox Text="{Binding selectedEmployee.Surname}" ToolTip="Please enter employee surname" HorizontalAlignment="Left" Height="23" Margin="120,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417"/>
         <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="542,35,0,0" VerticalAlignment="Top" Width="18" Height="26"/>
 
 
         <Label Content="Date Of Birth" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <DatePicker Text="{Binding DateOfBirth,  Mode = OneWayToSource}" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="120,74,0,0" VerticalAlignment="Top" Width="417"/>
+        <DatePicker Text="{Binding selectedEmployee.DateOfBirth}" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="120,74,0,0" VerticalAlignment="Top" Width="417"/>
         <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="542,71,0,0" VerticalAlignment="Top" Width="18" Height="26"/>
 
 
         <Label Content="Gender" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,12.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <ComboBox Text="{Binding Gender, Mode = OneWayToSource}" ToolTip="Please select employee gender" HorizontalAlignment="Left" Margin="120,4.6,0,0" VerticalAlignment="Top" Width="417" Grid.Row="1">
+        <ComboBox Text="{Binding selectedEmployee.Gender}" ToolTip="Please select employee gender" HorizontalAlignment="Left" Margin="120,4.6,0,0" VerticalAlignment="Top" Width="417" Grid.Row="1">
             <ComboBoxItem Content="Female"/>
             <ComboBoxItem Content="Male"/>
         </ComboBox>
@@ -101,7 +101,7 @@
 
 
         <Label Content="Home Address" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Grid.Row="2"/>
-        <TextBox Text="{Binding HomeAddress, Mode = OneWayToSource}" ToolTip="Please enter employee home address" HorizontalAlignment="Left" Height="23" Margin="120,4.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Grid.Row="2"/>
+        <TextBox Text="{Binding selectedEmployee.HomeAddress}" ToolTip="Please enter employee home address" HorizontalAlignment="Left" Height="23" Margin="120,4.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Grid.Row="2"/>
         <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="542,2.4,0,0" VerticalAlignment="Top" Width="18" Height="26" Grid.Row="2" RenderTransformOrigin="0.725,0.846"/>
 
 

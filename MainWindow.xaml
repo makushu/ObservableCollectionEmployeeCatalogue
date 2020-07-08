@@ -10,7 +10,10 @@
     
     <Grid>
         <views:EmployeeView x:Name = "EmployeeViewControl" Loaded = "EmployeeViewControl_Loaded"/>
-
+     <!--   <StackPanel>
+            <Button Content="Add"/>
+            <Button Content="Edit"/>
+        </StackPanel>-->
         <Frame x:Name="Main" Margin="0,35,0,0" NavigationUIVisibility="Hidden"/>
         
         

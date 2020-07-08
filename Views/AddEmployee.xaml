@@ -111,7 +111,7 @@
 
         <!--<Button Command="{Binding AddCommand}" Content="Button" HorizontalAlignment="Left" Margin="340,323,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBox Text="{Binding newName, Mode = OneWayToSource, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="340,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>-->
-        <TextBox Text="{Binding newName, Mode = OneWayToSource, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="98,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Text="{Binding newName, Mode = OneWayToSource, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="72,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="88,61,0,0" VerticalAlignment="Top" Width="75"/>
 
 

@@ -24,6 +24,8 @@ namespace TheCatalogueEmployee
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         private ObservableCollection<Employee> employee;
 
         public MainWindow()
@@ -38,22 +40,21 @@ namespace TheCatalogueEmployee
         {
             EmployeeViewModel employeeViewModel = new EmployeeViewModel();
             employeeViewModel.ShowEmployees();
-
             EmployeeViewControl.DataContext = employeeViewModel;
         }
 
         private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
         {
             
-            Main.Content = new AddEmployee();
+          //  Main.Content = new AddEmployee();
         }
 
         private void btnEditEmployee_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new EditEmployee();
+         //   Main.Content = new EditEmployee();
         }
 
-        
+     
     }
 
 }

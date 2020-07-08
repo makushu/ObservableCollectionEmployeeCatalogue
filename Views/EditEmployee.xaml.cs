@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheCatalogueEmployee.ViewModel;
 
 namespace TheCatalogueEmployee.Views
 {
@@ -20,10 +21,16 @@ namespace TheCatalogueEmployee.Views
     /// </summary>
     public partial class EditEmployee : Page
     {
+        EmployeeViewModel employeeViewModel;
         public EditEmployee()
         {
             InitializeComponent();
-        }
+            // DataContext = new EmployeeViewModel;
+         
+                // This is a bit redundant I think, but I can't rememeber if this is how you set it up
+             //   employeeViewModel = new EmployeeViewModel(selectedEmployee);
+                DataContext = employeeViewModel;
+            }
 
         private void btnEditEmployee_Click(object sender, RoutedEventArgs e)
         {

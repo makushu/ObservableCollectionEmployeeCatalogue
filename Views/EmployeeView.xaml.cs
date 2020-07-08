@@ -28,7 +28,7 @@ namespace TheCatalogueEmployee.Views
         public EmployeeView()
         {
            InitializeComponent();
-
+            this.DataContext = this;
         }
 
         private void btnShowAdd_Click(object sender, RoutedEventArgs e)
@@ -53,7 +53,27 @@ namespace TheCatalogueEmployee.Views
 
         private void ctmEdit(object sender, RoutedEventArgs e)
         {
-            PopEdit.IsOpen = true;
+             PopEdit.IsOpen = true;
+        }
+
+        private void ctmAdd(object sender, RoutedEventArgs e)
+        {
+            PopView.IsOpen = true;
+        }
+
+        private void btnCloseView_Click(object sender, RoutedEventArgs e)
+        {
+            PopView.IsOpen = false;
+        }
+
+        private void btnEditEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            PopEdit.IsOpen = false;
+        }
+
+        private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            PopAdd.IsOpen = false;
         }
     }
 

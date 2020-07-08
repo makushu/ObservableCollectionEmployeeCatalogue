@@ -25,7 +25,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         id = value;
-                        RaisePropertyChanged("id");
+                        RaisePropertyChanged("Id");
                     }
                 }
                 public string Name
@@ -34,7 +34,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         name = value;
-                        RaisePropertyChanged("name");
+                        RaisePropertyChanged("Name");
                     }
                 }
 
@@ -44,7 +44,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         surname = value;
-                        RaisePropertyChanged("surname");
+                        RaisePropertyChanged("Surname");
                     }
                 }
 
@@ -54,7 +54,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         dateOfBirth = value;
-                        RaisePropertyChanged("dateOfBirth");
+                        RaisePropertyChanged("DateOfBirth");
                     }
                 }
 
@@ -64,7 +64,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         gender = value;
-                        RaisePropertyChanged("gender");
+                        RaisePropertyChanged("Gender");
                     }
                 }
 
@@ -74,7 +74,7 @@ namespace TheCatalogueEmployee.Model
                     set
                     {
                         homeAddress = value;
-                        RaisePropertyChanged("homeAddress");
+                        RaisePropertyChanged("HomeAddress");
                     }
                 }
                 public event PropertyChangedEventHandler PropertyChanged;
@@ -83,7 +83,7 @@ namespace TheCatalogueEmployee.Model
                 {
                     if (PropertyChanged != null)
                     {
-                        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
                     }
                 }
             }
