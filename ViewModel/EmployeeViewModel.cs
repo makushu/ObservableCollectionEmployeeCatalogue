@@ -104,7 +104,15 @@ namespace TheCatalogueEmployee.ViewModel
 
         private void OnAdd()
         {
-            employees.Add(new Employee { Name = newName, Surname = newSurname, Gender=newGender, DateOfBirth=newDateOfBirth, HomeAddress=newHomeAddress});
+            if (Name.Length == 0 || Surname.Length == 0 || Gender.Length == 0 || DateOfBirth.Length == 0 || HomeAddress.Length == 0)
+            {
+                MessageBox.Show("Please enter all the employee's details");
+            }
+            else
+            {
+                employees.Add(new Employee { Name = newName, Surname = newSurname, Gender = newGender, DateOfBirth = newDateOfBirth, HomeAddress = newHomeAddress });
+
+            }
 
 
         }
@@ -114,12 +122,18 @@ namespace TheCatalogueEmployee.ViewModel
             var item = employees.FirstOrDefault(a => a.Name == selectedEmployee.Name);
             if (item != null)
             {
-                item.Name = Name;
-                item.Surname = Surname;
-                item.DateOfBirth = DateOfBirth.ToString();
-                item.Gender = Gender;
-                item.HomeAddress = HomeAddress;
-               
+                if (Name.Length == 0 || Surname.Length == 0 || Gender.Length == 0 || DateOfBirth.Length == 0 || HomeAddress.Length == 0)
+                {
+                    MessageBox.Show("Please enter all the employee's details");
+                }
+                else
+                {
+                    item.Name = Name;
+                    item.Surname = Surname;
+                    item.DateOfBirth = DateOfBirth;
+                    item.Gender = Gender;
+                    item.HomeAddress = HomeAddress;
+                }
             }
 
             

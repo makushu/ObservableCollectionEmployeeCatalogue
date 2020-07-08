@@ -114,7 +114,7 @@
 
 
                 <Label Content="Date Of Birth" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-                <DatePicker Text="{Binding DateOfBirth, Mode = OneWayToSource, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:dd/MM/yyyy}}"   x:Name="dpAddDateOfBirth" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="95,76,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Width="425"/>
+                <DatePicker Text="{Binding DateOfBirth, Mode = OneWayToSource, UpdateSourceTrigger=PropertyChanged, StringFormat=dd-MM-yyyy}"   x:Name="dpAddDateOfBirth" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="95,76,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Width="425"/>
                 <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="525,66,0,0" VerticalAlignment="Top" Width="18" Height="26" RenderTransformOrigin="0.467,0.6"/>
 
 
@@ -153,7 +153,7 @@
 
 
                 <Label Content="Date Of Birth" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top"/>
-                <DatePicker Text="{Binding DateOfBirth}"  x:Name="dpEditDateOfBirth" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Width="425"/>
+                <DatePicker Text="{Binding DateOfBirth, StringFormat=dd-MM-yyyy}" x:Name="dpEditDateOfBirth" ToolTip="Please select employee date of birth" DisplayDateStart="1/1/1955" DisplayDateEnd="12/31/2005" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Width="425"/>
                 <Label Content="*" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="520,104,0,0" VerticalAlignment="Top" Width="18" Height="26" RenderTransformOrigin="0.422,1.846"/>
 
 
